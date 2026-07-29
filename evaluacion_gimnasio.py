@@ -59,6 +59,8 @@ resumen_multivariable = df_gimnasio.groupby('tipo_plan').agg(
     gasto_suplementos_promed=('gasto_suplementos', 'mean'),
     gasto_suplementos_mediana=('gasto_suplementos', 'median')
 )
+
+# Correlación asistencia con nivel de gasto en suplementos
 correlacion = df_gimnasio['asistencias_mes'].corr(df_gimnasio['gasto_suplementos'])
 
 print("\n--- Resumen Multivariable ---")
